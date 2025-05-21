@@ -56,13 +56,13 @@ return {
     show_keys = true,                                                             -- show the currently pressed key and its label as a message in the command line
     triggers = "auto",                                                            -- automatically setup triggers
     -- triggers = {"<leader>"} -- or specify a list manually
-    triggers = {
-      -- list of mode / prefixes that should never be hooked by WhichKey
-      -- this is mostly relevant for key maps that start with a native binding
-      -- most people should not need to change this
-      i = { "j", "k" },
-      v = { "j", "k" },
-    },
+    -- triggers = {
+    -- list of mode / prefixes that should never be hooked by WhichKey
+    -- this is mostly relevant for key maps that start with a native binding
+    -- most people should not need to change this
+    -- i = { "j", "k" },
+    -- v = { "j", "k" },
+    -- },
     -- disable the WhichKey popup for certain buf types and file types.
     -- Disabled by default for Telescope
     disable = {
@@ -71,4 +71,3 @@ return {
     },
   }
 }
-
