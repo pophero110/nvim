@@ -12,10 +12,9 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.textwidth = 80
+vim.opt.wrap = true
 
 vim.opt.incsearch = true -- incremental search
 
 vim.opt.termguicolors = true
-
-
