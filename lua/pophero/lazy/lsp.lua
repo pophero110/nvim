@@ -31,7 +31,9 @@ return {
         "lua_ls",
         "ruff",
         "hls",
-        "gopls"
+        "gopls",
+        "jdtls",
+        "jsonls"
       },
       handlers = {
         function(server_name)
