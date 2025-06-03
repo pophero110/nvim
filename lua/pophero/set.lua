@@ -18,3 +18,6 @@ vim.opt.wrap = true
 vim.opt.incsearch = true -- incremental search
 
 vim.opt.termguicolors = true
+
+
+vim.opt.iskeyword:remove('_') -- treat some_variables as two words
