@@ -34,7 +34,9 @@ return {
         "gopls",
         "jdtls",
         "jsonls",
-        "ts_ls"
+        "ts_ls",
+        "html-lsp",
+        "css-lsp"
       },
       handlers = {
         function(server_name)
