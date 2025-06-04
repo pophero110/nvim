@@ -36,7 +36,9 @@ return {
         "jsonls",
         "ts_ls",
         "html-lsp",
-        "css-lsp"
+        "css-lsp",
+        "tailwindcss",
+        "emmet_ls"
       },
       handlers = {
         function(server_name)
