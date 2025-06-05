@@ -20,6 +20,24 @@ vim.api.nvim_create_autocmd('LspAttach', {
           n = { vim.lsp.buf.rename, "Rename" },
           w = { vim.lsp.buf.workspace_symbol, "Workspace symbol" },
           d = { vim.diagnostic.open_float, "Open diagnostic float" },
+          b = {
+            function()
+              local file = vim.fn.expand('%:p')
+              vim.cmd('write')
+              vim.fn.jobstart({ "biome", "lint", "--write", file }, {
+                on_exit = function(_, code)
+                  if code == 0 then
+                    print("Biome lint --write done")
+                    vim.cmd('edit')
+                  else
+                    print("Biome lint --write failed")
+                  end
+                end,
+              })
+            end,
+            "Run biome lint --write",
+
+          },
         },
       },
       ["[d"] = { vim.diagnostic.goto_next, "Go to next diagnostic" },

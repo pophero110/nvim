@@ -3,8 +3,17 @@ return {
   event = { "BufWritePre" },
   cmd = { "ConformInfo" },
   opts = {
+    formatters = {
+      biome_format = {
+        command = "biome",
+        args = { "format", "--write", "--stdin-file-path", "$FILENAME" },
+      },
+    },
     formatters_by_ft = {
-      markdown = { "prettierd" }
+      javascript = { "biome_format" },
+      javascriptreact = { "biome_format" },
+      typescript = { "biome_format" },
+      typescriptreact = { "biome_format" },
     },
     -- Set default options
     default_format_ops = {

@@ -35,10 +35,11 @@ return {
         "jdtls",
         "jsonls",
         "ts_ls",
-        "html-lsp",
-        "css-lsp",
+        "html",
+        "cssls",
         "tailwindcss",
-        "emmet_ls"
+        "emmet_ls",
+        "biome"
       },
       handlers = {
         function(server_name)
@@ -77,6 +78,21 @@ return {
             }
           })
         end,
+        ts_ls = function()
+          require('lspconfig').ts_ls.setup({
+            capabilities = capabilities,
+            filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "typescript.tsx" },
+          })
+        end,
+        biome = function()
+          require("lspconfig").biome.setup({
+            capabilities = capabilities,
+            on_attach = function(client, bufnr)
+              -- Optional: Add keybindings or other settings here
+            end,
+            filetypes = { "typescript", "javascript", "typescriptreact", "typescript.tsx", "javascriptreact" },
+          })
+        end
       }
     })
 
