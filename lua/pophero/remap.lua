@@ -70,16 +70,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 local non_lsp_mappings = {
   ["<leader>"] = {
-    e = { vim.cmd.Ex, "Open file explorer" },
+    e = { "<cmd>NvimTreeToggle<CR>", "Toggle file explorer" },
+    -- e = { vim.cmd.Ex, "Open file explorer" },
     p = { "\"_dP", "Paste without overwrite" },
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Toggle comment" },
     s = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Search and replace word under cursor" },
-    -- t = { ":Today<CR>", "Open today's note" },
-    t = {
-      name = "Test",
-      a = { ":!go test ./...<CR>", "All tests" },
-      f = { ":!go test %<CR>", "Test current file" },
-    },
+    t = { ":Today<CR>", "Open today's note" },
+    -- t = {
+    --   name = "Test",
+    --   a = { ":!go test ./...<CR>", "All tests" },
+    --   f = { ":!go test %<CR>", "Test current file" },
+    -- },
     w = { "<cmd>w<CR>", "Save file" }
   },
   J = { "mzJ`z", "Join lines and keep cursor position" },

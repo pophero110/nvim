@@ -9,7 +9,7 @@ return {
     insert_mappings = true,
     terminal_mappings = true,
     persist_size = true,
-    size = 80
+    size = 40
   },
   keys = {
     { "<C-\\>", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
