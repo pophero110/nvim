@@ -10,7 +10,8 @@ return {
       theme = "tokyonight",
       sections = {
         lualine_c = {
-          buffer_line_count
+          buffer_line_count,
+          { "filename", "%c" }
         }
       }
     })
