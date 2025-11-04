@@ -84,6 +84,13 @@ return {
             filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "typescript.tsx" },
           })
         end,
+        tailwindcss = function()
+          require('lspconfig').tailwindcss.setup({
+            capabilities = capabilities,
+            filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "typescript.tsx" },
+          })
+        end,
+
         biome = function()
           require("lspconfig").biome.setup({
             capabilities = capabilities,
