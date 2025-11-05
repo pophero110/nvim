@@ -3,7 +3,7 @@ return {
   version = "*",
   opts = {
     open_mapping = [[<C-\>]],
-    direction = "vertical", -- options: "horizontal", "vertical", "float"
+    direction = "float", -- options: "horizontal", "vertical", "float"
     shade_terminals = true,
     start_in_insert = true,
     insert_mappings = true,
