@@ -39,7 +39,8 @@ return {
         "cssls",
         "tailwindcss",
         "emmet_ls",
-        "biome"
+        "biome",
+        "bashls"
       },
       handlers = {
         function(server_name)
@@ -98,6 +99,12 @@ return {
               -- Optional: Add keybindings or other settings here
             end,
             filetypes = { "typescript", "javascript", "typescriptreact", "typescript.tsx", "javascriptreact" },
+          })
+        end,
+        bashls = function()
+          require("lspconfig").bashls.setup({
+            capabilities = capabilities,
+            filetypes = { "sh", "bash" },
           })
         end
       }
