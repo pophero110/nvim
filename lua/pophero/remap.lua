@@ -112,6 +112,7 @@ local telescope_mappings = {
     f = { builtin.find_files, "Find files" },
     g = { builtin.git_files, "Find git files" },
     l = { builtin.live_grep, "Live grep" },
+    b = { builtin, "builtin" },
   },
 }
 
